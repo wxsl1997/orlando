@@ -8,7 +8,7 @@ class User:
         print(f"__del__ {self}")
 
     def __str__(self):
-        return str.format(f"user:(name={self.name}, age={self.age})")
+        return f"user:(name={self.name}, age={self.age})"
 
     def get_age(self):
         return self.age
@@ -66,4 +66,40 @@ assert s1.get_name() == 's1'
 assert s1.get_p1_name() == 'p1'
 assert s1.get_p2_name() == 'p2'
 
+
 # 多态
+class P:
+    def work(self):
+        return None
+
+
+class S1(P):
+    def work(self):
+        return "s1"
+
+
+class S2(P):
+    def work(self):
+        return "s2"
+
+
+p = S1()
+assert p.work() == 's1'
+p = S2()
+assert p.work() == 's2'
+
+
+# 类方法, 类属性
+class NumHolder:
+    __num = 0
+
+    @classmethod
+    def get(cls):
+        return cls.__num
+
+    @staticmethod
+    def check(expect):
+        assert NumHolder.get() == expect
+
+
+NumHolder.check(0)
