@@ -11,7 +11,6 @@ def raise_exception():
     try:
         raise CustomException("test")
     except CustomException as result:
-
         assert result.message == "test"
     finally:
         print("execute finally method")

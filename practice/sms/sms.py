@@ -1,4 +1,5 @@
 from practice.sms.app.app import App
 
-app = App()
-app.run()
+if __name__ == '__main__':
+    app = App()
+    app.run()
