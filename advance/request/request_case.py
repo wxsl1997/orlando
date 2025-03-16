@@ -16,7 +16,7 @@ def test_requests_get(url: str, headers=None):
             # print(response.content)
             print(response.cookies)
     except Exception as e:
-        print(f'error occur when test request get{e}')
+        print(f'error occur when test request get, error:{e}')
 
 
 def test_requests_post(url: str, json=None, headers=None):
@@ -28,7 +28,7 @@ def test_requests_post(url: str, json=None, headers=None):
             print(f'{url} response code:{response.status_code}')
             print(response.text)
     except Exception as e:
-        print(f'error occur when test request post{e}')
+        print(f'error occur when test request post, error:{e}')
 
 
 if __name__ == '__main__':

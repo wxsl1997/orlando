@@ -14,7 +14,7 @@ def test_request(url: str, headers=None):
             data = response.read()
             print(data.decode(UTF_8))
     except Exception as e:
-        print(f'error occur when test request {e}')
+        print(f'error occur when test request, error:{e}')
 
 
 def test_urlopen(url: str):
@@ -23,7 +23,7 @@ def test_urlopen(url: str):
             data = response.read()
             print(data.decode(UTF_8))
     except Exception as e:
-        print(f'error occur when test url open {e}')
+        print(f'error occur when test url open, error:{e}')
 
 
 if __name__ == '__main__':

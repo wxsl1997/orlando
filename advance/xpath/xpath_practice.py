@@ -14,7 +14,7 @@ def run_request(url: str, headers=None):
             response.encoding = UTF_8
             result = response.text
     except Exception as e:
-        print(f'error occur when test request get{e}')
+        print(f'error occur when test request get, error: {e}')
     return result
 
 
