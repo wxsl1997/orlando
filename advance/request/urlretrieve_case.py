@@ -1,8 +1,6 @@
 import ssl
 from urllib import request
 
-UTF_8 = 'utf-8'
-
 # 忽略SSL证书验证
 # noinspection PyUnresolvedReferences,PyProtectedMember
 ssl._create_default_https_context = ssl._create_unverified_context
